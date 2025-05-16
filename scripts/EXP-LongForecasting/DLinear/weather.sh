@@ -1,4 +1,4 @@
-# add --individual for DLinear-I
+# add --individual for DLinear-I prova prova
 if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
