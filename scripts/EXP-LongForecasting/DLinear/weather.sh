@@ -22,7 +22,7 @@ python -u run_longExp.py \
   --des 'Exp' \
   --itr 1 --batch_size 16  >logs/LongForecasting/DLinear_Weather_$seq_len'_'96.log
 
-python -u run_longExp.py \
+'''python -u run_longExp.py \
   --is_training 1 \
   --root_path ./dataset/ \
   --data_path weather.csv \
@@ -62,4 +62,4 @@ python -u run_longExp.py \
   --pred_len 720 \
   --enc_in 21 \
   --des 'Exp' \
-  --itr 1 --batch_size 16  >logs/LongForecasting/DLinear_Weather_$seq_len'_'720.log
+  --itr 1 --batch_size 16  >logs/LongForecasting/DLinear_Weather_$seq_len'_'720.log'''
