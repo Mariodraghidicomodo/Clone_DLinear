@@ -27,8 +27,5 @@ python -u run_longExp.py \
   --seq_len $seq_len \
   --label_len $label_len \
   --pred_len $pred_len \
-  --enc_in 1 \
-  --dec_in 1 \
-  --c_out 1 \
   --des 'Exp' \
-  --itr 1 --batch_size 12 --feature S --learning_rate 0.005 >logs/LongForecasting/DLinear_freq_df_61_$seq_len'_'$pred_len'_'$label_len'_'S
+  --itr 1 --batch_size 30 --feature S --learning_rate 0.005 >logs/LongForecasting/DLinear_freq_df_61_$seq_len'_'$pred_len'_'$label_len'_'S
