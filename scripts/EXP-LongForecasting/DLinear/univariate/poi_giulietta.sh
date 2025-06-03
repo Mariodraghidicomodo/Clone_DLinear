@@ -9,15 +9,15 @@ fi
 if [ ! -d "./logs/LongForecasting/univariate" ]; then
     mkdir ./logs/LongForecasting/univariate
 fi
-seq_len=192
-label_len=96
-pred_len=48
+seq_len=96
+pred_len=1
+label_len=24
 
 python -u run_longExp.py \
   --is_training 1 \
   --root_path ./dataset/final_15min_df_poi/ \
-  --data_path frequency_15min_df_61.csv \
-  --model_id freq_df_61_15min_$seq_len'_'$pred_len'_'$label_len'_'S \
+  --data_path frequency_15min_df_61_year2018.csv \
+  --model_id freq_df_61_year2018_15min_$seq_len'_'$pred_len'_'$label_len'_'S \
   --model DLinear \
   --data custom \
   --features S \
@@ -29,4 +29,4 @@ python -u run_longExp.py \
   --label_len $label_len \
   --pred_len $pred_len \
   --des 'Exp' \
-  --itr 1 --batch_size 30 --feature S --learning_rate 0.005 >logs/LongForecasting/DLinear_freq_df_61_15min_Giulietta_$seq_len'_'$pred_len'_'$label_len'_'S
+  --itr 1 --batch_size 30 --feature S --learning_rate 0.005 >logs/LongForecasting/DLinear_freq_df_61_year2018_15min_Giulietta_2018_$seq_len'_'$pred_len'_'$label_len'_'S
