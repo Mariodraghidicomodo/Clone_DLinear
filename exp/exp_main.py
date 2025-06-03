@@ -44,7 +44,7 @@ class Exp_Main(Exp_Basic):
         return model_optim
 
     def _select_criterion(self):
-        criterion = nn.MSELoss()
+        criterion = nn.MSELoss() #ATTENZIONE!!
         return criterion
 
     def vali(self, vali_data, vali_loader, criterion):
@@ -188,7 +188,7 @@ class Exp_Main(Exp_Basic):
 
             print("Epoch: {0}, Steps: {1} | Train Loss: {2:.7f} Vali Loss: {3:.7f} Test Loss: {4:.7f}".format(
                 epoch + 1, train_steps, train_loss, vali_loss, test_loss))
-            early_stopping(vali_loss, self.model, path)
+            early_stopping(vali_loss, self.model, path) #cercare nel main e vedere!!
             if early_stopping.early_stop:
                 print("Early stopping")
                 break
