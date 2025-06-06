@@ -9,9 +9,9 @@ fi
 if [ ! -d "./logs/LongForecasting/univariate" ]; then
     mkdir ./logs/LongForecasting/univariate
 fi
-seq_len=96
-label_len=24
-pred_len=1
+seq_len=192
+label_len=96
+pred_len=48
 
 python -u run_longExp.py \
   --is_training 1 \
